@@ -1,0 +1,183 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": []
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--c-accent-coral",
+      "--c-accent-red",
+      "--c-accent-teal",
+      "--c-accent-teal-fg",
+      "--c-accent-teal-hover",
+      "--c-accent-violet",
+      "--c-border",
+      "--c-border-strong",
+      "--c-brand-blue",
+      "--c-brand-purple",
+      "--c-danger",
+      "--c-paper",
+      "--c-paper-tint",
+      "--c-success",
+      "--c-surface-glass",
+      "--c-surface-strong",
+      "--c-warning",
+      "--dur",
+      "--dur-fast",
+      "--ease",
+      "--fg-1",
+      "--fg-2",
+      "--fg-3",
+      "--fg-strong",
+      "--glass-header",
+      "--hero-grad-1",
+      "--hero-grad-2",
+      "--hero-grad-3",
+      "--hero-grad-4",
+      "--maxw-page",
+      "--maxw-read",
+      "--r-lg",
+      "--r-md",
+      "--r-pill",
+      "--r-sm",
+      "--r-xs",
+      "--s-1",
+      "--s-2",
+      "--s-3",
+      "--s-4",
+      "--s-5",
+      "--s-6",
+      "--s-7",
+      "--s-8",
+      "--s-9",
+      "--shadow-lg",
+      "--shadow-md",
+      "--shadow-sm",
+      "--shadow-soft",
+      "--t-body",
+      "--t-body-lg",
+      "--t-display",
+      "--t-eyebrow",
+      "--t-h1",
+      "--t-h2",
+      "--t-h3",
+      "--t-hero",
+      "--t-mono",
+      "--t-sans",
+      "--t-serif",
+      "--t-small",
+      "--t-track-tight",
+      "--t-track-wide",
+      "--t-weight-bold",
+      "--t-weight-med",
+      "--t-weight-reg",
+      "--t-weight-semi"
+    ],
+    "tokenKinds": {
+      "--c-brand-purple": "color",
+      "--c-brand-blue": "color",
+      "--c-accent-coral": "color",
+      "--c-accent-violet": "color",
+      "--c-accent-red": "color",
+      "--c-accent-teal": "color",
+      "--c-accent-teal-fg": "color",
+      "--c-accent-teal-hover": "color",
+      "--hero-grad-1": "color",
+      "--hero-grad-2": "color",
+      "--hero-grad-3": "color",
+      "--hero-grad-4": "color",
+      "--c-paper": "color",
+      "--c-paper-tint": "color",
+      "--c-surface-strong": "color",
+      "--c-surface-glass": "color",
+      "--fg-strong": "color",
+      "--fg-1": "color",
+      "--fg-2": "color",
+      "--fg-3": "color",
+      "--c-border": "color",
+      "--c-border-strong": "color",
+      "--glass-header": "color",
+      "--c-success": "color",
+      "--c-warning": "color",
+      "--c-danger": "color",
+      "--t-display": "other",
+      "--t-serif": "other",
+      "--t-sans": "other",
+      "--t-mono": "other",
+      "--t-hero": "other",
+      "--t-h1": "other",
+      "--t-h2": "other",
+      "--t-h3": "spacing",
+      "--t-body-lg": "spacing",
+      "--t-body": "spacing",
+      "--t-small": "spacing",
+      "--t-eyebrow": "spacing",
+      "--t-track-tight": "spacing",
+      "--t-track-wide": "spacing",
+      "--t-weight-reg": "font",
+      "--t-weight-med": "font",
+      "--t-weight-semi": "font",
+      "--t-weight-bold": "font",
+      "--s-1": "spacing",
+      "--s-2": "spacing",
+      "--s-3": "spacing",
+      "--s-4": "spacing",
+      "--s-5": "spacing",
+      "--s-6": "spacing",
+      "--s-7": "spacing",
+      "--s-8": "spacing",
+      "--s-9": "spacing",
+      "--r-xs": "spacing",
+      "--r-sm": "spacing",
+      "--r-md": "spacing",
+      "--r-lg": "spacing",
+      "--r-pill": "spacing",
+      "--shadow-sm": "shadow",
+      "--shadow-md": "shadow",
+      "--shadow-soft": "shadow",
+      "--shadow-lg": "shadow",
+      "--maxw-page": "spacing",
+      "--maxw-read": "spacing",
+      "--ease": "other",
+      "--dur-fast": "other",
+      "--dur": "other"
+    },
+    "fontFamilies": []
+  }
+}
