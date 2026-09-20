@@ -6,10 +6,7 @@
   <title>CoMPhy Lab — Design System</title>
   <link rel="icon" href="assets/logos/favicon.svg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="fonts/fonts.css" />
   <link rel="stylesheet" href="tokens.css" />
   <style>
     /* ---- Page chrome (specific to the design-system doc, not tokens) ---- */
@@ -642,12 +639,11 @@
     <div class="ds-section__head">
       <span class="num">07 · USAGE</span>
       <h2>Putting it on a page</h2>
-      <p class="sub">Drop <code class="copyable">tokens.css</code> in, load the three Google fonts, and you have 90% of the system. Everything else is three class names: <code class="copyable">.panel</code>, <code class="copyable">.btn</code>, <code class="copyable">.chip</code>.</p>
+      <p class="sub">Copy or link the self-host pack (<code class="copyable">fonts/</code>) plus <code class="copyable">tokens.css</code>, and you have 90% of the system. Everything else is three class names: <code class="copyable">.panel</code>, <code class="copyable">.btn</code>, <code class="copyable">.chip</code>.</p>
     </div>
 
     <div class="panel">
-      <pre class="code"><span class="c-key">&lt;link</span> <span class="c-str">rel</span>=<span class="c-str">"stylesheet"</span>
-      <span class="c-str">href</span>=<span class="c-str">"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&amp;family=Fraunces:ital,opsz,wght@0,9..144,400..700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap"</span><span class="c-key">&gt;</span>
+      <pre class="code"><span class="c-key">&lt;link</span> <span class="c-str">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-str">href</span>=<span class="c-str">"/fonts/fonts.css"</span><span class="c-key">&gt;</span>
 <span class="c-key">&lt;link</span> <span class="c-str">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-str">href</span>=<span class="c-str">"/tokens.css"</span><span class="c-key">&gt;</span>
 
 <span class="c-key">&lt;section</span> <span class="c-str">class</span>=<span class="c-str">"panel"</span><span class="c-key">&gt;</span>

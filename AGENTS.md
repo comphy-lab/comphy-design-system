@@ -8,7 +8,8 @@ Mirror of the Claude Design project **CoMPhy Lab Design System** (`2cdc2831-a1e8
 
 | Path | Role |
 |---|---|
-| `tokens.css` | Single source of truth. Every colour, type, spacing, radius and shadow token. |
+| `tokens.css` | Single source of truth for colour, type roles, spacing, radius and shadow. |
+| `fonts/` | Canonical self-hosted webfont pack (`fonts.css`, `*.woff2`, `OFL.txt`). |
 | `CoMPhy Design System.html` | Living style guide. Open this first; light/dark toggle top-right. |
 | `CoMPhy Website v2.html` | Website redesign answering the red-team audit. |
 | `Red Team Audit.html` | 12 findings against comphy-lab.org, with a priority matrix. |

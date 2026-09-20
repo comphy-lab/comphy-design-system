@@ -30,5 +30,17 @@ Two sources were used, because the DesignSync read path caps a single file at 25
 | File | Why | Fix |
 |---|---|---|
 | `_ds_bundle.js` | Not yet pulled | Re-run a DesignSync `get_file`, or let the Claude Design self-check regenerate it |
+| `CoMPhy Design System (standalone).html` | Generated build with prior Google Fonts inlined | Re-generate from the living guide after DesignSync; do not hand-edit |
 
 `_ds_manifest.json` was re-serialised through `jq -c`, so it is semantically identical to the remote but not necessarily byte-identical. It is a generated file; the next self-check will normalise it.
+
+## Webfont pack (added in-repo SoT)
+
+Canonical self-host tree (not from Claude Design):
+
+| Path | Source |
+|---|---|
+| `fonts/fonts.css` + `fonts/*.woff2` (14 faces) | `comphy-lab/club` `assets/css/fonts.css` + `assets/fonts/` (urls rewritten to `url(./…)` for co-located layout) |
+| `fonts/OFL.txt` | `comphy-lab/qr-codes` `site/assets/fonts/OFL.txt` |
+
+Demos load `fonts/fonts.css` locally. Google Fonts CDN is no longer the documented install path.
