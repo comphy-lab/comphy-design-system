@@ -173,14 +173,18 @@
       font-size: clamp(36px, 4.4vw, 56px);
       line-height: 1;
       letter-spacing: -0.015em;
-      /* A1: gradient clipped to just "CoMPhy Lab" */
-      background: linear-gradient(90deg, var(--hero-grad-1) 0%, var(--hero-grad-2) 45%, var(--hero-grad-3) 55%, var(--hero-grad-4) 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: var(--hero-grad-2); /* visible if background-clip:text is unsupported */
+      color: var(--hero-grad-2); /* solid fallback; clip+fill applied only when supported */
       margin: 0 0 var(--s-3);
       display: inline-block;
+    }
+    @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+      .hero__wordmark {
+        /* A1: gradient clipped to just "CoMPhy Lab" */
+        background: linear-gradient(90deg, var(--hero-grad-1) 0%, var(--hero-grad-2) 45%, var(--hero-grad-3) 55%, var(--hero-grad-4) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
     .hero__wordmark-line {
       display: flex; align-items: baseline;
