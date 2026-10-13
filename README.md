@@ -56,6 +56,17 @@ Each face includes latin + latin-ext woff2. Provenance: fuller pack from `comphy
 
 Flipping `<html data-theme="dark">` rewires paper/ink without touching components. Brand hues stay intact.
 
+### Coral as text
+
+`--c-accent-coral` (`#cf4900`) is the fill: swatches, chip grounds, avatar gradients. It is not for text. On 13 Oct 2026 it measured 3.97:1 on paper and on the `#f3efe8` panel, and 4.48:1 on `#fffdf9` (WebAIM, WCAG 2). Both fail AA for normal text.
+
+Text uses `--c-accent-coral-text`. In light mode that is `#c04400`, the same hue (about 21°) darkened until it clears 4.5:1 on `--c-paper` (`#f3efe8`), on that panel, and on `--c-surface-strong` (`#fffdf9`). `<strong>` and any other coral text, including thesis links, use this token. Dark mode sets the text token back to `#cf4900`. The fill does not change in either theme.
+
+| Pair | Before `#cf4900` | After `#c04400` (light text) |
+|---|---|---|
+| On `#f3efe8` (paper and the audited panel) | 3.97:1 fail | 4.50:1 pass |
+| On `#fffdf9` | 4.48:1 fail | 5.08:1 pass |
+
 ## The three class names you need
 
 ```html
