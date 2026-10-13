@@ -336,7 +336,10 @@ h3 { font-size: var(--t-h3); }
 }
 .chip--brand { background: color-mix(in srgb, var(--c-brand-purple) 10%, transparent); color: var(--c-brand-purple); border-color: color-mix(in srgb, var(--c-brand-purple) 22%, transparent); }
 .chip--blue  { background: color-mix(in srgb, var(--c-brand-blue) 10%, transparent); color: var(--c-brand-blue); border-color: color-mix(in srgb, var(--c-brand-blue) 22%, transparent); }
-.chip--coral { background: color-mix(in srgb, var(--c-accent-coral) 10%, transparent); color: var(--c-accent-coral-text); border-color: color-mix(in srgb, var(--c-accent-coral) 22%, transparent); }
+/* Label is darker than --c-accent-coral-text. The 10% fill tint
+   renders as #efddd0 on paper and #f7e7db on the light panel, where
+   #c04400 is short of 4.5:1. #b03c00 is the same hue and clears both. */
+.chip--coral { background: color-mix(in srgb, var(--c-accent-coral) 10%, transparent); color: #b03c00; border-color: color-mix(in srgb, var(--c-accent-coral) 22%, transparent); }
 :root[data-theme="dark"] .chip--brand { color: #d99adc; }
 :root[data-theme="dark"] .chip--blue  { color: #8fb8ff; }
 :root[data-theme="dark"] .chip--coral { color: #ff9966; }
