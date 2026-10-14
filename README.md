@@ -56,6 +56,22 @@ Each face includes latin + latin-ext woff2. Provenance: fuller pack from `comphy
 
 Flipping `<html data-theme="dark">` rewires paper/ink without touching components. Brand hues stay intact.
 
+### Coral as text
+
+`--c-accent-coral` (`#cf4900`) is the fill: swatches, chip grounds, avatar gradients. It is not body text. On 13 Oct 2026 it measured 3.97:1 on `#f3efe8` and 4.48:1 on `#fffdf9` (WebAIM, WCAG 2). Both fail AA for normal text. `#f3efe8` is `--c-paper`, and it is the panel colour named in that audit. This system's `.panel` is glass; its rendered light ground is `#fcfaf5`, which is a separate, lighter surface.
+
+Text on those surfaces uses `--c-accent-coral-text`. In light mode that is `#c04400`, the same hue (about 21°) darkened until it clears 4.5:1. `<strong>` and other coral text, including thesis links, use this token. Dark mode sets the text token back to `#cf4900`. The fill does not change in either theme.
+
+The coral chip keeps the 10% fill tint. That tint renders darker than the surface under it (`#efddd0` on paper, `#f7e7db` on the light panel), so the light label is `#b03c00` (same hue). Dark chip text stays `#ff9966`.
+
+| Pair | Before `#cf4900` | After (light) |
+|---|---|---|
+| On `#f3efe8` paper, the audited panel | 3.97:1 fail | `#c04400` 4.50:1 pass |
+| On rendered light `.panel` `#fcfaf5` | — | `#c04400` 4.94:1 pass |
+| On `#fffdf9` | 4.48:1 fail | `#c04400` 5.08:1 pass |
+| Chip label on rendered tint `#efddd0` (over paper) | — | `#b03c00` 4.55:1 pass |
+| Chip label on rendered tint `#f7e7db` (over the light panel) | — | `#b03c00` 4.98:1 pass |
+
 ## The three class names you need
 
 ```html
