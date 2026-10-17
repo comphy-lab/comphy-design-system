@@ -60,7 +60,7 @@ Flipping `<html data-theme="dark">` rewires paper/ink without touching component
 
 `--c-accent-coral` (`#cf4900`) is the fill: swatches, chip grounds, avatar gradients. It is not body text. On 13 Oct 2026 it measured 3.97:1 on `#f3efe8` and 4.48:1 on `#fffdf9` (WebAIM, WCAG 2). Both fail AA for normal text. `#f3efe8` is `--c-paper`, and it is the panel colour named in that audit. This system's `.panel` is glass; its rendered light ground is `#fcfaf5`, which is a separate, lighter surface.
 
-Text on those surfaces uses `--c-accent-coral-text`. In light mode that is `#c04400`, the same hue (about 21°) darkened until it clears 4.5:1. `<strong>` and other coral text, including thesis links, use this token. Dark mode sets the text token back to `#cf4900`. The fill does not change in either theme.
+Text on those surfaces uses `--c-accent-coral-text`. In light mode that is `#c04400`, the same hue (about 21°) darkened until it clears 4.5:1. `<strong>` and other coral text, including thesis links, use this token. In dark mode the fill is too dark for text (3.84:1 on `--c-surface-strong` `#1c1915`, 4.17:1 on `--c-paper` `#12100d`), so the text token is `#ff6714`, the same hue lifted until it clears 4.5:1 with margin. The fill does not change in either theme.
 
 The coral chip keeps the 10% fill tint. That tint renders darker than the surface under it (`#efddd0` on paper, `#f7e7db` on the light panel), so the light label is `#b03c00` (same hue). Dark chip text stays `#ff9966`.
 
@@ -71,6 +71,14 @@ The coral chip keeps the 10% fill tint. That tint renders darker than the surfac
 | On `#fffdf9` | 4.48:1 fail | `#c04400` 5.08:1 pass |
 | Chip label on rendered tint `#efddd0` (over paper) | — | `#b03c00` 4.55:1 pass |
 | Chip label on rendered tint `#f7e7db` (over the light panel) | — | `#b03c00` 4.98:1 pass |
+
+| Pair (dark) | Before `#cf4900` | After |
+|---|---|---|
+| On `--c-paper` `#12100d` | 4.17:1 fail | `#ff6714` 6.51:1 pass |
+| On `--c-paper-tint` `#1a1713` | 3.92:1 fail | `#ff6714` 6.12:1 pass |
+| On `--c-surface-strong` `#1c1915` | 3.84:1 fail | `#ff6714` 6.01:1 pass |
+
+Dark values were computed with the WCAG 2 contrast formula on 17 Oct 2026. Sites that redefine the dark surfaces lighter, as the comphy-lab.org shell does (`#1b1814` to `#2b251d`), still get at least 5.2:1.
 
 ## The three class names you need
 
